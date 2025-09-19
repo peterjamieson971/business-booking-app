@@ -9,7 +9,7 @@
     "lint": "eslint",
     "scrape-images": "node scripts/scrape-images.js",
     "optimize-images": "node scripts/optimize-images.js",
-    "prebuild": "npm run scrape-images && npm run optimize-images"
+    "prebuild": "echo 'Skipping image scraping in production build'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -28,7 +28,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
   const bookingReference = `PCA${Date.now().toString().slice(-6)}`;
 
   // Calculate totals
-  const basePrice = ((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails?.price as number || 0;
+  const basePrice = (((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.price as number || 0;
   const vat = Math.round(basePrice * 0.05);
   const totalPrice = basePrice + vat;
 

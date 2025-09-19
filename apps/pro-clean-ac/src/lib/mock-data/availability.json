@@ -1,0 +1,76 @@
+{
+  "slots": [
+    {
+      "date": "2024-09-20",
+      "times": ["09:00", "11:00", "14:00", "16:00"],
+      "surge": false,
+      "technician": "John Smith"
+    },
+    {
+      "date": "2024-09-21",
+      "times": ["08:00", "10:00", "13:00", "15:00", "17:00"],
+      "surge": false,
+      "technician": "Mike Johnson"
+    },
+    {
+      "date": "2024-09-22",
+      "times": ["09:00", "14:00"],
+      "surge": true,
+      "surgeMultiplier": 1.2,
+      "technician": "Sarah Davis"
+    },
+    {
+      "date": "2024-09-23",
+      "times": ["08:00", "10:00", "12:00", "14:00", "16:00"],
+      "surge": false,
+      "technician": "John Smith"
+    },
+    {
+      "date": "2024-09-24",
+      "times": ["09:00", "11:00", "13:00", "15:00"],
+      "surge": false,
+      "technician": "Mike Johnson"
+    },
+    {
+      "date": "2024-09-25",
+      "times": ["10:00", "14:00", "16:00"],
+      "surge": false,
+      "technician": "Sarah Davis"
+    },
+    {
+      "date": "2024-09-26",
+      "times": ["08:00", "11:00", "14:00"],
+      "surge": false,
+      "technician": "John Smith"
+    },
+    {
+      "date": "2024-09-27",
+      "times": ["09:00", "13:00", "15:00", "17:00"],
+      "surge": false,
+      "technician": "Mike Johnson"
+    }
+  ],
+  "technicians": [
+    {
+      "id": "john-smith",
+      "name": "John Smith",
+      "specialties": ["repair", "maintenance"],
+      "rating": 4.9,
+      "experience": "8 years"
+    },
+    {
+      "id": "mike-johnson",
+      "name": "Mike Johnson",
+      "specialties": ["installation", "emergency"],
+      "rating": 4.8,
+      "experience": "12 years"
+    },
+    {
+      "id": "sarah-davis",
+      "name": "Sarah Davis",
+      "specialties": ["maintenance", "repair"],
+      "rating": 5.0,
+      "experience": "6 years"
+    }
+  ]
+}

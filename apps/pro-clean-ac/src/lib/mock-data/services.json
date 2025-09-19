@@ -1,0 +1,77 @@
+{
+  "services": [
+    {
+      "id": "maintenance",
+      "name": "Regular Maintenance",
+      "description": "Comprehensive AC system maintenance to keep your unit running efficiently",
+      "price": {
+        "base": 89,
+        "premium": 149
+      },
+      "duration": "1-2 hours",
+      "popular": true,
+      "features": [
+        "Filter replacement",
+        "Coil cleaning",
+        "System inspection",
+        "Performance testing"
+      ],
+      "icon": "wrench"
+    },
+    {
+      "id": "repair",
+      "name": "AC Repair",
+      "description": "Professional diagnosis and repair of AC system issues",
+      "price": {
+        "base": 120,
+        "premium": 250
+      },
+      "duration": "2-4 hours",
+      "popular": false,
+      "features": [
+        "System diagnosis",
+        "Component replacement",
+        "Performance testing",
+        "Warranty included"
+      ],
+      "icon": "tools"
+    },
+    {
+      "id": "installation",
+      "name": "New Installation",
+      "description": "Complete AC system installation with professional setup",
+      "price": {
+        "base": 2500,
+        "premium": 4500
+      },
+      "duration": "4-8 hours",
+      "popular": false,
+      "features": [
+        "System sizing",
+        "Professional installation",
+        "System setup",
+        "2-year warranty"
+      ],
+      "icon": "home"
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency Service",
+      "description": "24/7 emergency AC repair service",
+      "price": {
+        "base": 180,
+        "premium": 350
+      },
+      "duration": "1-3 hours",
+      "popular": false,
+      "features": [
+        "24/7 availability",
+        "Priority response",
+        "Emergency repair",
+        "Same-day service"
+      ],
+      "icon": "zap",
+      "urgent": true
+    }
+  ]
+}

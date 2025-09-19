@@ -1,0 +1,64 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "name": "Sarah Johnson",
+      "rating": 5,
+      "text": "Excellent service! Technician was professional and thorough. My AC is running better than ever.",
+      "date": "2024-01-15",
+      "service": "AC Repair",
+      "location": "Dubai Marina",
+      "verified": true
+    },
+    {
+      "id": "2",
+      "name": "Mike Rodriguez",
+      "rating": 5,
+      "text": "Quick response time and fair pricing. The emergency service saved us during the heatwave!",
+      "date": "2024-01-10",
+      "service": "Emergency Service",
+      "location": "Downtown Dubai",
+      "verified": true
+    },
+    {
+      "id": "3",
+      "name": "Emily Chen",
+      "rating": 4,
+      "text": "Professional installation team. Clean work and explained everything clearly.",
+      "date": "2024-01-08",
+      "service": "New Installation",
+      "location": "Jumeirah",
+      "verified": true
+    },
+    {
+      "id": "4",
+      "name": "David Thompson",
+      "rating": 5,
+      "text": "Regular maintenance service is top-notch. They caught a potential issue before it became expensive.",
+      "date": "2024-01-05",
+      "service": "Regular Maintenance",
+      "location": "Business Bay",
+      "verified": true
+    },
+    {
+      "id": "5",
+      "name": "Lisa Martinez",
+      "rating": 5,
+      "text": "Friendly staff, reasonable prices, and excellent workmanship. Highly recommend!",
+      "date": "2024-01-03",
+      "service": "AC Repair",
+      "location": "Sheikh Zayed Road",
+      "verified": true
+    },
+    {
+      "id": "6",
+      "name": "James Wilson",
+      "rating": 4,
+      "text": "Great service and communication. Technician arrived on time and fixed the problem quickly.",
+      "date": "2023-12-28",
+      "service": "Regular Maintenance",
+      "location": "DIFC",
+      "verified": true
+    }
+  ]
+}

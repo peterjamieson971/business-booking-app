@@ -1,0 +1,17 @@
+{
+  "thermostat": {
+    "name": "woman-adjusting-thermostat",
+    "description": "Woman adjusting home thermostat/AC control",
+    "usage": "Hero sections, comfort/temperature control content"
+  },
+  "remote": {
+    "name": "woman-using-ac-remote",
+    "description": "Woman using AC remote control in modern room",
+    "usage": "User experience, comfort sections"
+  },
+  "professional": {
+    "name": "professional-ac-cleaning",
+    "description": "Professional AC cleaning/maintenance being performed",
+    "usage": "Service sections, professional work demonstrations"
+  }
+}

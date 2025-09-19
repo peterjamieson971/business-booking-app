@@ -9,11 +9,7 @@ import {
   Shield,
   Award,
   Star,
-  Users,
-  CheckCircle,
-  Target,
-  Heart,
-  Zap
+  Users
 } from "lucide-react";
 import Link from "next/link";
 

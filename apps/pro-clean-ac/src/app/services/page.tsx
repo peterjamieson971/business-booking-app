@@ -402,7 +402,7 @@ export default function ServicesPage() {
                 Why Choose Pro Clean AC
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Dubai's Trusted AC Cleaning Experts
+                Dubai&apos;s Trusted AC Cleaning Experts
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 At Pro Clean AC our aim is to always provide the best value for money
@@ -449,7 +449,7 @@ export default function ServicesPage() {
               className="text-center mb-16"
             >
               <Badge variant="secondary" className="mb-4">
-                FAQ's
+                FAQ&apos;s
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Pro Clean AC are always here to help you.
@@ -495,7 +495,7 @@ export default function ServicesPage() {
                 Ready to Improve Your Air Quality?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Get professional AC cleaning services from Dubai's trusted experts
+                Get professional AC cleaning services from Dubai&apos;s trusted experts
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">

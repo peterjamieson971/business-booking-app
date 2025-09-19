@@ -13,9 +13,7 @@ import {
   Shield,
   Clock,
   Award,
-  DollarSign,
   Users,
-  Zap,
   ArrowRight
 } from "lucide-react";
 import Link from "next/link";
@@ -157,7 +155,7 @@ export default function PricingPage() {
               </h1>
               <p className="text-xl text-blue-50 max-w-3xl mx-auto mb-8">
                 No hidden fees, no surprises. Get instant quotes with our pricing calculator
-                and choose the package that's right for your home or business.
+                and choose the package that&apos;s right for your home or business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
@@ -396,7 +394,7 @@ export default function PricingPage() {
                         ))}
                       </div>
                       <p className="text-gray-700 mb-4 leading-relaxed">
-                        "{testimonial.text}"
+                        &ldquo;{testimonial.text}&rdquo;
                       </p>
                       <div>
                         <div className="font-semibold text-gray-900">{testimonial.name}</div>

@@ -37,7 +37,7 @@ export default function BookingPage() {
     }
   };
 
-  const updateBookingData = (step: string, data: any) => {
+  const updateBookingData = (step: string, data: Record<string, unknown>) => {
     setBookingData(prev => ({
       ...prev,
       [step]: data

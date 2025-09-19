@@ -14,8 +14,7 @@ import {
   MapPin,
   MessageCircle,
   Clock,
-  Shield,
-  CheckCircle
+  Shield
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -111,7 +110,7 @@ export default function ContactPage() {
                 Get in touch
               </h1>
               <p className="text-xl text-blue-50">
-                Want to get in touch with Pro Clean AC? We'd love to hear from you. Here's how you can reach us.
+                Want to get in touch with Pro Clean AC? We&apos;d love to hear from you. Here&apos;s how you can reach us.
               </p>
             </motion.div>
           </div>
@@ -277,7 +276,7 @@ export default function ContactPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
                     <Shield className="w-4 h-4" />
-                    <span>We don't share your data.</span>
+                    <span>We don&apos;t share your data.</span>
                     <a href="/privacy-policy" className="text-blue-600 hover:underline">
                       View Privacy Policy
                     </a>

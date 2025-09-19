@@ -255,7 +255,7 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
               </div>
 
               <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-900 mb-2">What's Included</h4>
+                <h4 className="font-semibold text-blue-900 mb-2">What&apos;s Included</h4>
                 <ul className="space-y-1 text-sm text-blue-800">
                   <li>• Professional service guarantee</li>
                   <li>• All equipment and materials</li>

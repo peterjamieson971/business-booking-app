@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 
 interface PropertyDetailsProps {
-  data: any;
-  onNext: (data: any) => void;
+  data: Record<string, unknown>;
+  onNext: (data: Record<string, unknown>) => void;
   onBack: () => void;
 }
 

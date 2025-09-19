@@ -19,8 +19,8 @@ import {
 import "react-day-picker/dist/style.css";
 
 interface DateTimeSelectionProps {
-  data: any;
-  onNext: (data: any) => void;
+  data: Record<string, unknown>;
+  onNext: (data: Record<string, unknown>) => void;
   onBack: () => void;
 }
 

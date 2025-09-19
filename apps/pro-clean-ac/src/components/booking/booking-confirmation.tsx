@@ -28,7 +28,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
   const bookingReference = `PCA${Date.now().toString().slice(-6)}`;
 
   // Calculate totals
-  const basePrice = bookingData.serviceDetails?.packageDetails?.price || 0;
+  const basePrice = ((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails?.price as number || 0;
   const vat = Math.round(basePrice * 0.05);
   const totalPrice = basePrice + vat;
 
@@ -227,7 +227,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Confirmation</h4>
               <p className="text-sm text-gray-600">
-                You'll receive a confirmation email and SMS with all booking details
+                You&apos;ll receive a confirmation email and SMS with all booking details
               </p>
             </div>
 
@@ -320,7 +320,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
             Help Us Improve
           </h3>
           <p className="text-gray-600 mb-4">
-            After your service, we'd love to hear about your experience
+            After your service, we&apos;d love to hear about your experience
           </p>
           <div className="flex justify-center gap-1">
             {[1, 2, 3, 4, 5].map((star) => (

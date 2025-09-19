@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 
 interface ServiceSelectionProps {
-  data: any;
-  onNext: (data: any) => void;
+  data: Record<string, unknown>;
+  onNext: (data: Record<string, unknown>) => void;
 }
 
 export function ServiceSelection({ data, onNext }: ServiceSelectionProps) {

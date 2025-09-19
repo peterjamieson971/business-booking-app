@@ -18,8 +18,8 @@ import {
 } from "lucide-react";
 
 interface ContactDetailsProps {
-  data: any;
-  onNext: (data: any) => void;
+  data: Record<string, unknown>;
+  onNext: (data: Record<string, unknown>) => void;
   onBack: () => void;
 }
 
@@ -129,7 +129,7 @@ export function ContactDetails({ data, onNext, onBack }: ContactDetailsProps) {
           Contact Information
         </h2>
         <p className="text-gray-600">
-          We'll use this information to confirm your booking and provide updates
+          We&apos;ll use this information to confirm your booking and provide updates
         </p>
       </div>
 

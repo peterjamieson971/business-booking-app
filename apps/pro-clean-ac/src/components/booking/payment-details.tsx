@@ -26,8 +26,8 @@ import {
 } from "lucide-react";
 
 interface PaymentDetailsProps {
-  bookingData: any;
-  onNext: (data: any) => void;
+  bookingData: Record<string, unknown>;
+  onNext: (data: Record<string, unknown>) => void;
   onBack: () => void;
 }
 
@@ -624,7 +624,7 @@ export function PaymentDetails({ bookingData, onNext, onBack }: PaymentDetailsPr
               </Button>
 
               <p className="text-xs text-center text-gray-500">
-                By clicking "Pay" you agree to our terms and authorize the payment
+                By clicking &quot;Pay&quot; you agree to our terms and authorize the payment
               </p>
             </CardContent>
           </Card>

@@ -42,7 +42,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
     if (navigator.share) {
       navigator.share({
         title: 'Pro Clean AC Booking Confirmation',
-        text: `My AC service is booked for ${bookingData.dateTime?.formattedDate}`,
+        text: `My AC service is booked for ${((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedDate || 'soon'}`,
         url: window.location.href
       });
     }
@@ -92,7 +92,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <div className="font-semibold text-blue-900">
-                    {bookingData.dateTime?.formattedDate}
+                    {((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedDate || 'Date TBD'}
                   </div>
                   <Badge className="bg-blue-600">
                     Confirmed

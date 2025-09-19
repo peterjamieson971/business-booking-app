@@ -18,7 +18,7 @@ export default function AboutPage() {
     {
       icon: "duct",
       title: "Duct Cleaning",
-      description: "Air duct cleaning is the process of removing dust, dirt, mould, and anything that shouldn't be in your air conditioning duct systems.",
+      description: "Air duct cleaning is the process of removing dust, dirt, mould, and anything that shouldn&apos;t be in your air conditioning duct systems.",
       image: "/images/optimized/about-duct-cleaning-dubai-17-640w.webp"
     },
     {

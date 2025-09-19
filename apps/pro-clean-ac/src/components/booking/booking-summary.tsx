@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 interface BookingSummaryProps {
-  bookingData: any;
+  bookingData: Record<string, unknown>;
   onNext: () => void;
   onBack: () => void;
 }

@@ -27,7 +27,7 @@ export default function ServicesPage() {
       id: "duct-cleaning",
       title: "Duct Cleaning",
       subtitle: "Dubai's Experts in Duct Cleaning",
-      description: "Air duct cleaning is the process of removing dust, dirt, mould, and anything that shouldn't be in your air conditioning duct systems to improve the air quality in your home.",
+      description: "Air duct cleaning is the process of removing dust, dirt, mould, and anything that shouldn&apos;t be in your air conditioning duct systems to improve the air quality in your home.",
       image: "/images/optimized/hero-duct-cleaning-services-dubai-1-1024w.webp",
       icon: Wind,
       features: [
@@ -155,7 +155,7 @@ export default function ServicesPage() {
 
   const faqs = [
     {
-      question: "What happens if you don't clean your air ducts?",
+      question: "What happens if you don&apos;t clean your air ducts?",
       answer: "Dust, bacteria and mould can accumulate in your ducts and have a drastic effect on your air quality within your home or office. Dust will also reduce the efficiency of your AC system."
     },
     {

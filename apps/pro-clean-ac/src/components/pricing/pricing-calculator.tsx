@@ -26,7 +26,7 @@ import Link from "next/link";
 interface Service {
   id: string;
   name: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   basePrice: number;
   unit: string;
   description: string;
@@ -210,7 +210,7 @@ export function PricingCalculator() {
             {propertyTypes.map((type) => (
               <button
                 key={type.id}
-                onClick={() => setPropertyDetails(prev => ({ ...prev, type: type.id as any }))}
+                onClick={() => setPropertyDetails(prev => ({ ...prev, type: type.id as PropertyDetails['type'] }))}
                 className={`p-3 rounded-lg border-2 transition-all ${
                   propertyDetails.type === type.id
                     ? 'border-blue-500 bg-blue-50 text-blue-700'
@@ -482,7 +482,7 @@ export function PricingCalculator() {
               Select Services to Get Started
             </h3>
             <p className="text-gray-600">
-              Choose the services you need and we'll calculate an instant quote for you
+              Choose the services you need and we&apos;ll calculate an instant quote for you
             </p>
           </div>
         )}

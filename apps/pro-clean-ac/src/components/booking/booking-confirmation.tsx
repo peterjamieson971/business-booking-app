@@ -21,7 +21,7 @@ import {
 import Link from "next/link";
 
 interface BookingConfirmationProps {
-  bookingData: any;
+  bookingData: Record<string, unknown>;
 }
 
 export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {

@@ -10,7 +10,6 @@ import {
   Clock,
   Star,
   CheckCircle,
-  Snowflake,
   Wind
 } from "lucide-react";
 import { motion } from "framer-motion";

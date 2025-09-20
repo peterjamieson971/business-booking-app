@@ -92,7 +92,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <div className="font-semibold text-blue-900">
-                    {((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedDate || 'Date TBD'}
+                    {(((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedDate as string) || 'Date TBD'}
                   </div>
                   <Badge className="bg-blue-600">
                     Confirmed

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { BookingSteps } from "@/components/booking/booking-steps";
@@ -24,6 +24,10 @@ export default function BookingPage() {
   });
 
   const totalSteps = 7;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentStep]);
 
   const nextStep = () => {
     if (currentStep < totalSteps) {

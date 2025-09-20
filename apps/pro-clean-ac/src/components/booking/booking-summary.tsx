@@ -32,10 +32,10 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
     "maintenance": Wrench
   };
 
-  const ServiceIcon = serviceIcons[bookingData.serviceDetails?.service as keyof typeof serviceIcons] || Wind;
+  const ServiceIcon = serviceIcons[((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.service as keyof typeof serviceIcons] || Wind;
 
   // Calculate totals
-  const basePrice = bookingData.serviceDetails?.packageDetails?.price || 0;
+  const basePrice = (((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.price as number || 0;
   const vat = Math.round(basePrice * 0.05); // 5% VAT
   const totalPrice = basePrice + vat;
 

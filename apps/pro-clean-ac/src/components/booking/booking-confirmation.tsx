@@ -136,11 +136,11 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
                 <div className="font-medium text-gray-900">
                   {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.address as string}
                 </div>
-                {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building && (
+                {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building) && (
                   <div className="text-gray-600">
                     {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building as string}
-                    {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor && `, Floor ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor as string}`}
-                    {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment && `, Apt ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment as string}`}
+                    {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor) && `, Floor ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor as string}`}
+                    {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment) && `, Apt ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment as string}`}
                   </div>
                 )}
                 <div className="text-gray-600">
@@ -203,7 +203,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
                   <CheckCircle className="w-4 h-4 text-green-600" />
                   <span className="text-green-800 font-medium">Payment Confirmed</span>
                 </div>
-                {((bookingData as Record<string, unknown>)?.payment as Record<string, unknown>)?.transactionId && (
+                {Boolean(((bookingData as Record<string, unknown>)?.payment as Record<string, unknown>)?.transactionId) && (
                   <div className="text-sm text-green-700 mt-1">
                     Transaction ID: {((bookingData as Record<string, unknown>)?.payment as Record<string, unknown>)?.transactionId as string}
                   </div>

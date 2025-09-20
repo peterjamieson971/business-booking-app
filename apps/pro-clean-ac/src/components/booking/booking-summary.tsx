@@ -70,25 +70,25 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-semibold text-gray-900">
-                    {bookingData.serviceDetails?.serviceDetails?.name}
+                    {(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.name as string}
                   </h3>
                   <p className="text-gray-600">
-                    {bookingData.serviceDetails?.serviceDetails?.description}
+                    {(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.description as string}
                   </p>
                 </div>
                 <Badge className="bg-blue-600">
-                  {bookingData.serviceDetails?.packageDetails?.name}
+                  {(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.name as string}
                 </Badge>
               </div>
 
               <div className="flex items-center gap-4 text-sm text-gray-600">
                 <div className="flex items-center gap-1">
                   <Home className="w-4 h-4" />
-                  <span>{bookingData.serviceDetails?.packageDetails?.units}</span>
+                  <span>{(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.units as string}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
-                  <span>{bookingData.serviceDetails?.serviceDetails?.duration}</span>
+                  <span>{(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.duration as string}</span>
                 </div>
               </div>
 
@@ -96,7 +96,7 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
               <div>
                 <h4 className="font-medium text-gray-900 mb-2">Service Includes:</h4>
                 <div className="grid grid-cols-2 gap-2">
-                  {bookingData.serviceDetails?.serviceDetails?.includes?.map((item: string, index: number) => (
+                  {((((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.includes as string[])?.map((item: string, index: number) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span>{item}</span>
@@ -119,22 +119,22 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span className="font-medium text-gray-700">Property Type:</span>
-                  <p className="text-gray-600 capitalize">{bookingData.property?.propertyType}</p>
+                  <p className="text-gray-600 capitalize">{((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.propertyType as string}</p>
                 </div>
                 <div>
                   <span className="font-medium text-gray-700">Emirate:</span>
-                  <p className="text-gray-600">{bookingData.property?.emirate}</p>
+                  <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.emirate as string}</p>
                 </div>
-                {bookingData.property?.bedrooms && (
+                {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.bedrooms) && (
                   <div>
                     <span className="font-medium text-gray-700">Bedrooms:</span>
-                    <p className="text-gray-600">{bookingData.property.bedrooms}</p>
+                    <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.bedrooms as string}</p>
                   </div>
                 )}
-                {bookingData.property?.bathrooms && (
+                {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.bathrooms) && (
                   <div>
                     <span className="font-medium text-gray-700">Bathrooms:</span>
-                    <p className="text-gray-600">{bookingData.property.bathrooms}</p>
+                    <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.bathrooms as string}</p>
                   </div>
                 )}
               </div>
@@ -142,17 +142,17 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
               <div>
                 <span className="font-medium text-gray-700">Address:</span>
                 <p className="text-gray-600">
-                  {bookingData.property?.address}
-                  {bookingData.property?.building && `, ${bookingData.property.building}`}
-                  {bookingData.property?.floor && `, Floor ${bookingData.property.floor}`}
-                  {bookingData.property?.apartment && `, Apt ${bookingData.property.apartment}`}
+                  {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.address as string}
+                  {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building) && `, ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building as string}`}
+                  {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor) && `, Floor ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor as string}`}
+                  {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment) && `, Apt ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment as string}`}
                 </p>
               </div>
 
-              {bookingData.property?.accessInstructions && (
+              {Boolean(((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.accessInstructions) && (
                 <div>
                   <span className="font-medium text-gray-700">Access Instructions:</span>
-                  <p className="text-gray-600">{bookingData.property.accessInstructions}</p>
+                  <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.accessInstructions as string}</p>
                 </div>
               )}
             </CardContent>
@@ -174,10 +174,10 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
                   </div>
                   <div>
                     <div className="font-semibold text-green-900">
-                      {bookingData.dateTime?.formattedDate}
+                      {((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedDate as string}
                     </div>
                     <div className="text-green-700">
-                      {bookingData.dateTime?.formattedTime}
+                      {((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedTime as string}
                     </div>
                   </div>
                 </div>
@@ -201,27 +201,27 @@ export function BookingSummary({ bookingData, onNext, onBack }: BookingSummaryPr
                 <div>
                   <span className="font-medium text-gray-700">Name:</span>
                   <p className="text-gray-600">
-                    {bookingData.contact?.firstName} {bookingData.contact?.lastName}
+                    {((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.firstName as string} {((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.lastName as string}
                   </p>
                 </div>
                 <div>
                   <span className="font-medium text-gray-700">Phone:</span>
-                  <p className="text-gray-600">{bookingData.contact?.phone}</p>
+                  <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.phone as string}</p>
                 </div>
                 <div>
                   <span className="font-medium text-gray-700">Email:</span>
-                  <p className="text-gray-600">{bookingData.contact?.email}</p>
+                  <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.email as string}</p>
                 </div>
                 <div>
                   <span className="font-medium text-gray-700">Preferred Contact:</span>
-                  <p className="text-gray-600 capitalize">{bookingData.contact?.preferredContact}</p>
+                  <p className="text-gray-600 capitalize">{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.preferredContact as string}</p>
                 </div>
               </div>
 
-              {bookingData.contact?.specialRequests && (
+              {Boolean(((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.specialRequests) && (
                 <div>
                   <span className="font-medium text-gray-700">Special Requests:</span>
-                  <p className="text-gray-600">{bookingData.contact.specialRequests}</p>
+                  <p className="text-gray-600">{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.specialRequests as string}</p>
                 </div>
               )}
             </CardContent>

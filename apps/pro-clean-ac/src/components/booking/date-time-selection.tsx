@@ -26,10 +26,10 @@ interface DateTimeSelectionProps {
 
 export function DateTimeSelection({ data, onNext, onBack }: DateTimeSelectionProps) {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
-    data.date ? new Date(data.date) : undefined
+    data.date ? new Date(data.date as string) : undefined
   );
-  const [selectedTime, setSelectedTime] = useState(data.time || "");
-  const [selectedPeriod, setSelectedPeriod] = useState(data.period || "");
+  const [selectedTime, setSelectedTime] = useState((data.time as string) || "");
+  const [selectedPeriod, setSelectedPeriod] = useState((data.period as string) || "");
 
   // Available time slots
   const timeSlots = [

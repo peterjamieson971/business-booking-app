@@ -25,14 +25,14 @@ interface ContactDetailsProps {
 
 export function ContactDetails({ data, onNext, onBack }: ContactDetailsProps) {
   const [formData, setFormData] = useState({
-    firstName: data.firstName || "",
-    lastName: data.lastName || "",
-    email: data.email || "",
-    phone: data.phone || "",
-    alternatePhone: data.alternatePhone || "",
-    preferredContact: data.preferredContact || "phone",
-    specialRequests: data.specialRequests || "",
-    hearAboutUs: data.hearAboutUs || ""
+    firstName: (data.firstName as string) || "",
+    lastName: (data.lastName as string) || "",
+    email: (data.email as string) || "",
+    phone: (data.phone as string) || "",
+    alternatePhone: (data.alternatePhone as string) || "",
+    preferredContact: (data.preferredContact as string) || "phone",
+    specialRequests: (data.specialRequests as string) || "",
+    hearAboutUs: (data.hearAboutUs as string) || ""
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});

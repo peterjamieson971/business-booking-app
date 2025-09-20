@@ -119,7 +119,7 @@ export function PaymentProcessingOverlay({
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  delay={0.3}
+                  transition={{ delay: 0.3 }}
                   className="mt-4 text-sm text-gray-600"
                 >
                   A confirmation email will be sent to you shortly.

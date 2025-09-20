@@ -23,17 +23,17 @@ interface PropertyDetailsProps {
 
 export function PropertyDetails({ data, onNext, onBack }: PropertyDetailsProps) {
   const [formData, setFormData] = useState({
-    propertyType: data.propertyType || "",
-    bedrooms: data.bedrooms || "",
-    bathrooms: data.bathrooms || "",
-    squareFootage: data.squareFootage || "",
-    address: data.address || "",
-    emirate: data.emirate || "",
-    building: data.building || "",
-    floor: data.floor || "",
-    apartment: data.apartment || "",
-    specialInstructions: data.specialInstructions || "",
-    accessInstructions: data.accessInstructions || ""
+    propertyType: (data.propertyType as string) || "",
+    bedrooms: (data.bedrooms as string) || "",
+    bathrooms: (data.bathrooms as string) || "",
+    squareFootage: (data.squareFootage as string) || "",
+    address: (data.address as string) || "",
+    emirate: (data.emirate as string) || "",
+    building: (data.building as string) || "",
+    floor: (data.floor as string) || "",
+    apartment: (data.apartment as string) || "",
+    specialInstructions: (data.specialInstructions as string) || "",
+    accessInstructions: (data.accessInstructions as string) || ""
   });
 
   const propertyTypes = [

@@ -88,7 +88,7 @@ export function PaymentDetails({ bookingData, onNext, onBack }: PaymentDetailsPr
   ];
 
   // Calculate totals
-  const basePrice = bookingData.serviceDetails?.packageDetails?.price || 0;
+  const basePrice = (((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.price as number || 0;
   const vat = Math.round(basePrice * 0.05); // 5% VAT
   const totalPrice = basePrice + vat;
 
@@ -540,10 +540,10 @@ export function PaymentDetails({ bookingData, onNext, onBack }: PaymentDetailsPr
               <div className="space-y-3">
                 <div>
                   <div className="font-semibold text-gray-900">
-                    {bookingData.serviceDetails?.serviceDetails?.name}
+                    {(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.name as string}
                   </div>
                   <div className="text-sm text-gray-600">
-                    {bookingData.serviceDetails?.packageDetails?.name}
+                    {(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.name as string}
                   </div>
                 </div>
 

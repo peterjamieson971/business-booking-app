@@ -100,7 +100,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
                 </div>
                 <div className="flex items-center gap-2 text-blue-700">
                   <Clock className="w-4 h-4" />
-                  <span>{bookingData.dateTime?.formattedTime}</span>
+                  <span>{(((bookingData as Record<string, unknown>)?.dateTime as Record<string, unknown>)?.formattedTime as string) || 'Time TBD'}</span>
                 </div>
               </div>
 
@@ -109,15 +109,15 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Service:</span>
-                    <span className="font-medium">{bookingData.serviceDetails?.serviceDetails?.name}</span>
+                    <span className="font-medium">{(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.name as string}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Package:</span>
-                    <span className="font-medium">{bookingData.serviceDetails?.packageDetails?.name}</span>
+                    <span className="font-medium">{(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.packageDetails as Record<string, unknown>)?.name as string}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Duration:</span>
-                    <span className="font-medium">{bookingData.serviceDetails?.serviceDetails?.duration}</span>
+                    <span className="font-medium">{(((bookingData as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.serviceDetails as Record<string, unknown>)?.duration as string}</span>
                   </div>
                 </div>
               </div>
@@ -134,17 +134,17 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
             <CardContent>
               <div className="space-y-2">
                 <div className="font-medium text-gray-900">
-                  {bookingData.property?.address}
+                  {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.address as string}
                 </div>
-                {bookingData.property?.building && (
+                {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building && (
                   <div className="text-gray-600">
-                    {bookingData.property.building}
-                    {bookingData.property?.floor && `, Floor ${bookingData.property.floor}`}
-                    {bookingData.property?.apartment && `, Apt ${bookingData.property.apartment}`}
+                    {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.building as string}
+                    {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor && `, Floor ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.floor as string}`}
+                    {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment && `, Apt ${((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.apartment as string}`}
                   </div>
                 )}
                 <div className="text-gray-600">
-                  {bookingData.property?.emirate}, UAE
+                  {((bookingData as Record<string, unknown>)?.property as Record<string, unknown>)?.emirate as string}, UAE
                 </div>
               </div>
             </CardContent>
@@ -163,15 +163,15 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
             <CardContent className="space-y-3">
               <div className="flex items-center gap-3">
                 <User className="w-4 h-4 text-gray-500" />
-                <span>{bookingData.contact?.firstName} {bookingData.contact?.lastName}</span>
+                <span>{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.firstName as string} {((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.lastName as string}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gray-500" />
-                <span>{bookingData.contact?.phone}</span>
+                <span>{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.phone as string}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gray-500" />
-                <span>{bookingData.contact?.email}</span>
+                <span>{((bookingData as Record<string, unknown>)?.contact as Record<string, unknown>)?.email as string}</span>
               </div>
             </CardContent>
           </Card>
@@ -203,9 +203,9 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
                   <CheckCircle className="w-4 h-4 text-green-600" />
                   <span className="text-green-800 font-medium">Payment Confirmed</span>
                 </div>
-                {bookingData.payment?.transactionId && (
+                {((bookingData as Record<string, unknown>)?.payment as Record<string, unknown>)?.transactionId && (
                   <div className="text-sm text-green-700 mt-1">
-                    Transaction ID: {bookingData.payment.transactionId}
+                    Transaction ID: {((bookingData as Record<string, unknown>)?.payment as Record<string, unknown>)?.transactionId as string}
                   </div>
                 )}
               </div>

@@ -129,7 +129,7 @@ export function PricingCalculator() {
       const newValue = Math.max(0, current + change);
 
       if (newValue === 0) {
-        const { [serviceId]: _, ...rest } = prev;
+        const { [serviceId]: _removed, ...rest } = prev;
         return rest;
       }
 
